@@ -19,8 +19,8 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
-    Route::get('/', function () {
-        return view('dashboard');
+    Route::get('/home', function () {
+        return view('products/list_products');
     })->name('dashboard')->middleware('validacion');
     Route::get('/policy', function () {
         return view('dashboard');
